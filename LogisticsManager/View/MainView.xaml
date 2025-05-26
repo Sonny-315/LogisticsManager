@@ -1,30 +1,34 @@
-﻿<Window x:Class="LogisticsManager.MainView"
+﻿<Window x:Class="LogisticsManager.View.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LogisticsManager"
+        xmlns:local="clr-namespace:LogisticsManager.View"
         mc:Ignorable="d"
-        Title="Logistics Manager" Height="450" Width="800">
+        Title="Logistics Manager" Height="600" Width="1400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid x:Name="InitSettingGrid" Visibility="Visible">
-                <Button Content="Setting State" Width="120" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Border BorderBrush="Black" BorderThickness="3" Margin="3">
+                    <Button Content="Init Logistics Grid" Width="150" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding CmdInitSetting}"/>
+                </Border>
             </Grid>
             <Grid x:Name="LogisStatusGrid" Visibility="Collapsed">
-                
+                <Border BorderBrush="Black" BorderThickness="3" >
+                    
+                </Border>
             </Grid>
-            
+
         </Grid>
 
         <Grid Grid.Column="1">
-            
+
         </Grid>
-        
-        
+
+
     </Grid>
 </Window>

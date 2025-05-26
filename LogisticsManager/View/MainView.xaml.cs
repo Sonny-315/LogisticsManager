@@ -10,22 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LogisticsManager
+namespace LogisticsManager.View
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// MainView.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class MainView : Window
     {
-        MainViewModel mvm;
 
+        MainViewModel mvm;
         public MainView()
         {
             InitializeComponent();
-            mvm = new MainViewModel();
+            mvm = new MainViewModel(this);
             DataContext = mvm;
 
         }
