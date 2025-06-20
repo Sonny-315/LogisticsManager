@@ -5,21 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogisticsManager.View"
         mc:Ignorable="d"
-        Title="Initialize Logistics Grid" Height="400" Width="400">
+        Title="Initialize Logistics Grid" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Row" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding lstInitRow}" SelectedValue="{Binding m_nSetRow, UpdateSourceTrigger=PropertyChanged}" Width="50" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Text="Column" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Grid.Column="3" ItemsSource="{Binding lstInitCol}" SelectedValue="{Binding m_nSelCol, UpdateSourceTrigger=PropertyChanged}" Width="50" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
-
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Title" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Grid.Column="1" Text="{Binding m_strTitle, UpdateSourceTrigger=PropertyChanged}" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="2">
 
